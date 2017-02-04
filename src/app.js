@@ -1,10 +1,16 @@
 import React from 'react';
+import { Router, Route, hashHistory, Redirect } from 'react-router';
+
+import Bikes from './bikes/Bikes';
+import NotFound from './NotFound';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Bikes Front-End application</h1>
-    </div>
+    <Router history={hashHistory}>
+      <Redirect from="/" to="bikes" />
+      <Route path="bikes" component={Bikes} />
+      <Route path="*" component={NotFound} />
+    </Router>
   );
 };
 
