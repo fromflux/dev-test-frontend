@@ -1,21 +1,19 @@
 import React from 'react';
 
+import BikesItem from './BikesItem';
+
 const BikesList = ({ bikes }) => {
   return (
     <div className="BikesList">
       {
-        bikes.map((item) => {
-          return (
-            <div className="BikesItem" key={item.id} >{item.name}</div>
-          );
-        })
+        bikes.map((item) => <BikesItem key={item.id} item={item} />)
       }
     </div>
   );
 }
 
 BikesList.propTypes = {
-  bikes: React.PropTypes.array
+  bikes: React.PropTypes.array.isRequired
 }
 
 export default BikesList;

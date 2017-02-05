@@ -29,6 +29,6 @@ describe('BikesList', () => {
   });
 
   it('Should render all passed items', () => {
-    expect(bikesList.find('.BikesItem').length).toEqual(bikes.length);
+    expect(bikesList.find('BikesItem').length).toEqual(bikes.length);
   });
 });

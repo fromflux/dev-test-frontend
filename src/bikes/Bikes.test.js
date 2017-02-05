@@ -9,7 +9,7 @@ describe('Bikes', () => {
     bikes = shallow(<Bikes />);
   });
 
-  it('Should render', () => {
+  it('Should render a BikesList', () => {
     expect(bikes.find('BikesList').length).toEqual(1);
   });
 });
