@@ -5,6 +5,7 @@ import App from './app';
 describe('App', () => {
   it('Should render', () => {
     const app = shallow(<App />);
-    expect(app.find('h1').text()).toEqual('Bikes Front-End application');
+    expect(app.node.type.displayName).toEqual('Router');
+    expect(app).toBeDefined();
   });
 });

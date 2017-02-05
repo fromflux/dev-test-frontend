@@ -6,7 +6,7 @@ const BikesList = ({ bikes }) => {
       {
         bikes.map((item) => {
           return (
-            <div key={item.id} >{item.name}</div>
+            <div className="BikesItem" key={item.id} >{item.name}</div>
           );
         })
       }

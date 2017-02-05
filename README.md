@@ -21,4 +21,4 @@ http://localhost:3000/
 
 Copyright (c) 2016 Rod Melo
 
-MIT (http://www.opensource.org/licenses/mit-license.php)
+GPL-3.0
