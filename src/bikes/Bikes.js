@@ -87,10 +87,34 @@ class Bikes extends Component {
     });
   }
 
+  sortedBikes() {
+    let bikes = this.state.items.slice();
+    let sorted = [];
+    const order = ['race', 'comfort'];
+    
+    order.forEach((orderItem) => {
+      bikes.forEach((bike) => {
+        if (bike.class.indexOf(orderItem) > -1) {
+          if (sorted.findIndex((item) => { return item.id === bike.id}) === -1) {
+            sorted.push(bike);
+          }
+        }
+      });
+    });
+
+    bikes.forEach((bike) => {
+      if (sorted.findIndex((item) => { return item.id === bike.id}) === -1) {
+        sorted.push(bike);
+      }
+    });
+
+    return sorted;
+  }
+
   render() {
     return (
       <div id="Bikes">
-        <BikesList bikes={this.state.items} />
+        <BikesList bikes={this.sortedBikes()} />
       </div>
     );
   }

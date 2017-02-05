@@ -20,6 +20,8 @@ describe('BikesItem', () => {
   });
 
   it('Should render passed item', () => {
-    expect(bikesItem.find('.BikesItem').text()).toEqual(item.name);
+    expect(bikesItem.find('.BikesItem-thumb img').prop('src')).toEqual(item.image.thumb);
+    expect(bikesItem.find('.BikesItem-name').text()).toEqual(item.name);
+    expect(bikesItem.find('.BikesItem-description').text()).toEqual(item.description);
   });
 });
