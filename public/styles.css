@@ -5,6 +5,15 @@ body {
   min-width: 320px;
 }
 
+.Header {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  background-color: #3d5c8e;
+  color: #ffffff;
+  font-weight: bold;
+}
+
 .BikesList-list {
   display: flex;
   flex-wrap: wrap;

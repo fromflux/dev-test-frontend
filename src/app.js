@@ -1,14 +1,17 @@
 import React from 'react';
-import { Router, Route, hashHistory, Redirect } from 'react-router';
+import { Router, Route, hashHistory, Redirect, IndexRedirect } from 'react-router';
 
+import Root from './Root';
 import Bikes from './bikes/Bikes';
 import NotFound from './NotFound';
 
 const App = () => {
   return (
     <Router history={hashHistory}>
-      <Redirect from="/" to="bikes" />
-      <Route path="bikes" component={Bikes} />
+      <Route path="/" component={Root}>
+        <IndexRedirect to="/bikes" />
+        <Route path="bikes" component={Bikes} />
+      </Route>
       <Route path="*" component={NotFound} />
     </Router>
   );
