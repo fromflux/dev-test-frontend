@@ -1,6 +1,6 @@
 # fromflux/dev-test-frontend
 
-This is a front end development assessment
+This is the source code for a front end development assessment solution available [here](https://dev-test-frontend.herokuapp.com)
 
 ## Installation
 
@@ -14,7 +14,7 @@ npm install
 npm start
 
 # open in your browser
-http://localhost:3000/
+http://localhost:8080/
 ```
 
 ## License
