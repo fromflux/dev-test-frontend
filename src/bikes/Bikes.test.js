@@ -12,4 +12,8 @@ describe('Bikes', () => {
   it('Should render a BikesList', () => {
     expect(bikes.find('BikesList').length).toEqual(1);
   });
+
+  it('Should render toolbar', () => {
+    expect(bikes.find('BikesListToolbar').length).toEqual(1);
+  });
 });

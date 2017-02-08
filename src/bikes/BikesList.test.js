@@ -28,10 +28,6 @@ describe('BikesList', () => {
     bikesList = shallow(<BikesList bikes={bikes} />);
   });
 
-  it('Should render toolbar', () => {
-    expect(bikesList.find('.BikesList-toolbar').length).toEqual(1);
-  });
-
   it('Should render all passed items', () => {
     expect(bikesList.find('BikesItem').length).toEqual(bikes.length);
   });

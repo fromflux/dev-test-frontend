@@ -14,33 +14,67 @@ body {
   font-weight: bold;
 }
 
-.BikesList-list {
+.BikesList {
   display: flex;
   flex-wrap: wrap;
   padding: 5px;
 }
 
-.BikesList-toolbar {
+.BikesListToolbar {
   background-color: #f5f5f5;
-  height: 50px;
-  line-height: 50px;
-  text-align: right;
-  padding: 0 10px;
+  padding: 10px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 40px;
 }
 
-.BikesList-button {
+.BikesListToolbar-option {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.BikesListToolbar-option label {
+  font-size: .8em;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.BikesListToolbar-class {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8em;
+  margin-left: -5px;
+  cursor: pointer;
+}
+
+.BikesListToolbar-class li {
+  display: inline-block;
+  padding: 2px 5px;
+  border-radius: 6px;
+  border: 1px solid #b8cada;
+  background-color: #f0f8ff;
+  margin: 0 0 5px 5px;
+}
+
+.BikesListToolbar-class li:hover {
+  background-color: #b7d4ec;
+}
+
+.BikesListToolbar-button {
   background-color: #fafafa;
   border: 1px solid #d8d8d8;
   border-radius: 6px;
   padding: 10px 20px;
   cursor: pointer;
+  align-self: center;
 }
 
-.BikesList-button:focus {
+.BikesListToolbar-button:focus {
   outline:0;
 }
 
-.BikesList-button:hover {
+.BikesListToolbar-button:hover {
   background-color: #e4e4e4;
 }
 
